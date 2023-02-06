@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', \App\Http\Livewire\Cover::class)->name('cover');
+
+Route::get('/intro', \App\Http\Livewire\Intro::class)->name('intro');
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+Route::get('/welcome', \App\Http\Livewire\IntroCompleted::class)->name('welcome');
+Route::get('/account', \App\Http\Livewire\ChooseLogin::class)->name('account');

@@ -37,7 +37,7 @@ services:
             - '.:/application'
             - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.0/fpm/conf.d/99-overrides.ini'
 
-        ### phpMyAdmin ###########################################
+            ### phpMyAdmin ###########################################
     phpmyadmin:
         image: phpmyadmin
         restart: always
